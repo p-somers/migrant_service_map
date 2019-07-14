@@ -1,5 +1,6 @@
 import React from "react";
 import Expandable from "./expandable";
+import expandable_styles from "./expandable.module.css";
 
 export default class CheckBoxDropdown extends React.Component {
   optionsMappings = {};
@@ -24,7 +25,7 @@ export default class CheckBoxDropdown extends React.Component {
     const inputDiv = options.map((option, index) => {
       const { display, id } = option;
       return (
-        <div className="dropdown-input-wrapper" key={index}>
+        <div className={expandable_styles.dropdown_input_wrapper} key={index}>
           <input
             id={id}
             type="checkbox"

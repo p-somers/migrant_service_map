@@ -20,6 +20,7 @@ import {
   faBalanceScale
 } from "@fortawesome/free-solid-svg-icons";
 import "./menu-dropdown-item.css";
+import styles from "../Dropdowns/expandable.module.css";
 import DetailsPane from "components/DetailsPane";
 import providerTypeToColor from "provider-type-to-color.json";
 
@@ -61,7 +62,7 @@ export default class DropdownMenuItem extends React.Component {
       >
         <div className="card-container">
           <div className="card-header">
-            <h5 className={expand} onClick={this.onItemClick}>
+            <h5 className={expand + expand === "expanded" ? " " + styles.expanded : ""} onClick={this.onItemClick}>
               {provider.name}
             </h5>
             <div className="wrapped-info">

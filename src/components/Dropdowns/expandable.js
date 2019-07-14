@@ -1,5 +1,5 @@
 import React from "react";
-import "./expandable.css";
+import styles from "./expandable.module.css";
 import ClickAwayDetector from "components/common/click-away-detector";
 
 export default class Expandable extends React.Component {
@@ -51,23 +51,23 @@ export default class Expandable extends React.Component {
     return (
       <ClickAwayDetector
         onClickAway={this.onClickAway}
-        className={"expandable-container"}
+        className={styles.expandable}
       >
         <div
-          className={`expandable-content-wrapper ${className} ${
-            expanded ? "expanded" : ""
+          className={`${styles.content_wrapper} ${className} ${
+            expanded ? styles.expanded : ""
           }`}
         >
-          <div onClick={this.toggleExpanded} className="expandable-header">
+          <div onClick={this.toggleExpanded} className={styles.header}>
             {header}
           </div>
           <div
             onClick={this.toggleExpandedOnSelect}
-            className={`expanded-content ${expanded ? "expanded" : ""}`}
+            className={`${styles.content} ${expanded ? styles.expanded : ""}`}
           >
             {content}
           </div>
-          <div className={`expanded-content ${expanded ? "expanded" : ""}`}>
+          <div className={`${styles.content} ${expanded ? styles.expanded : ""}`}>
             {footer}
           </div>
         </div>

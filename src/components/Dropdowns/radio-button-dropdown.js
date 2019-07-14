@@ -13,7 +13,7 @@ export default class RadioButtonDropdown extends React.Component {
     const inputDiv = options.map((option, index) => {
       const { value, text } = option;
       return (
-        <div className="dropdown-input-wrapper" key={index}>
+        <div className="dropdown_input_wrapper" key={index}>
           <input
             id={text}
             type="radio"
