@@ -18,7 +18,7 @@
   margin-right: 1rem;
 }
 .sort-container .expandable-container .expanded {
-  transition: all 0.1s ease-out;
+  transition: all 0.08s ease-out;
 }
 .side-menu .expandable-container .expanded-content {
   padding: 0;
@@ -46,6 +46,7 @@
 .radio-container {
   color: gray;
   padding: 0.75rem;
+  background-color: white;
 }
 .radio-container:hover {
   background-color: #d2e9ff;

@@ -20,24 +20,24 @@ class ProviderList extends Component {
     return (
       <div className="service-providers">
         {!providersList.length && (
-          <>
-            <h4>NO MATCHING RESULTS</h4>
-            <p>
+          <div className={"tab-header"}>
+            <h3 className={"header-text"}>No Matching Results</h3>
+            <div className={"header-subtext"}>
               Use the filters in the top bar to adjust the number of results
-            </p>
-          </>
+            </div>
+          </div>
         )}
         {!!providersList.length && (
           <>
             <SortDropdown
               className="sort-by"
               options={["Distance", "Name", "Provider Type"]}
-              header="Sort By"
+              header={"sorted by "}
               handleChange={id => {
                 changeSortOrder(id);
               }}
               changeDirection={() => {
-                changeSortDirection(sortDirection === 'desc' ? 'asc' : 'desc');
+                changeSortDirection(sortDirection === "desc" ? "asc" : "desc");
               }}
               sortDirection={sortDirection}
               group="sort"
